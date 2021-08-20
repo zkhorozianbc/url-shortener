@@ -4,7 +4,6 @@ import (
 	"fmt"
 
 	"github.com/gin-gonic/gin"
-
 	"github.com/zkhorozianbc/url-shortener/handlers"
 	"github.com/zkhorozianbc/url-shortener/store"
 )
