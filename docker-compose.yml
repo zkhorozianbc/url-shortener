@@ -5,10 +5,6 @@ services:
     build: .     
     ports:
       - "9808:9808"
-    # env_file: .env
-    # volumes:
-    #   - .:/go/src
-
   redis:
     image: redis
     ports:
