@@ -1,14 +1,16 @@
-FROM golang:1.16
+FROM golang:latest
 
 
 WORKDIR /app
 
-COPY . .
+COPY go.mod go.sum ./
 
 RUN go mod download
 
-RUN go install 
+COPY . .
+
+RUN go build -o main .
 
 EXPOSE 9808
 
-CMD ["url-shortener"]
+CMD ["./main"]
